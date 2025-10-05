@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>😂 Random Joke Generator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-labelledby="app-title">
+        <h1 id="app-title" class="title">😂 Random Joke Generator</h1>
+
+        <div class="joke-area">
+          <div id="emoji" class="emoji" aria-hidden="true">🤹‍♀️</div>
+
+          <p id="joke" class="joke-text" aria-live="polite">
+            Press the button to get a joke!
+          </p>
+
+          <div id="loading" class="loading" hidden>
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="loading-text">Loading...</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="getJokeBtn" class="btn primary" type="button">Get Another Joke</button>
+          <button id="copyBtn" class="btn secondary" type="button" disabled>Copy Joke</button>
+        </div>
+      </section>
+
+      <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+        Copied to clipboard
+      </div>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
